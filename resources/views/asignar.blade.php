@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @extends('adminlte::page')
 
 @section('title', 'Dashboard')
@@ -7,6 +8,8 @@
 @stop
 
 @section('content')
+=======
+>>>>>>> 3e5931582f6be998297b6fe31bac1d679f967146
 <!doctype html>
 <html lang="en">
     <head>
@@ -46,6 +49,7 @@
         ></script>
     </body>
 </html>
+<<<<<<< HEAD
 
 
 
@@ -63,3 +67,5 @@
 @section('js')
     <script> console.log("¡Hola, estoy usando el paquete Laravel-AdminLTE!"); </script>
 @stop
+=======
+>>>>>>> 3e5931582f6be998297b6fe31bac1d679f967146

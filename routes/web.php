@@ -5,7 +5,10 @@ use App\Http\Controllers\AsignarController;
 use App\Http\Controllers\BitacorasController;
 use App\Http\Controllers\ImportarController;
 use App\Http\Controllers\RegistrarController;
+<<<<<<< HEAD
 use App\Http\Controllers\HomeController;
+=======
+>>>>>>> 3e5931582f6be998297b6fe31bac1d679f967146
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -26,7 +29,10 @@ Route::get('/asignar', [AsignarController::class, 'index']);
 Route::get('/bitacoras', [BitacorasController::class, 'index']);
 Route::get('/importar', [ImportarController::class, 'index']);
 Route::get('/registrar', [RegistrarController::class, 'index']);
+<<<<<<< HEAD
 Route::get('/admin/dashboard', [HomeController::class, 'index']);
+=======
+>>>>>>> 3e5931582f6be998297b6fe31bac1d679f967146
 
 
 
