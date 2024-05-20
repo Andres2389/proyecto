@@ -1,0 +1,32 @@
+*{
+font-family: 'work sans';
+font-weight: bold;
+}
+body{
+    background-image: url(../assents/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.btn-primary {
+    background-color: #39a900;
+    border: none;
+}
+
+
+.btn-primary:hover {
+    background-color: #317f06; /* Cambiar a un tono más oscuro para el hover suave */
+}
+.card-body{
+    border: 1px solid #000;
+    background-color: #fbfbfb;
+    border-radius: 15px;
+    height: 650px;
+}
+.card-body input ,label{
+    
+    margin-top: 1em;
+}
+button{
+    margin-top: 4em;
+    width: 412px;
+}
