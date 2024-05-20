@@ -216,4 +216,6 @@ table.table .avatar {
 }	
 .modal form label {
     font-weight: normal;
+   background-color: #aaa;
+   
 }

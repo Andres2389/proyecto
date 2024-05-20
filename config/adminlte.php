@@ -14,11 +14,7 @@ return [
     |
     */
 
-<<<<<<< HEAD
     'title' => 'SS_ETP',
-=======
-    'title' => 'AdminLTE 3',
->>>>>>> 3e5931582f6be998297b6fe31bac1d679f967146
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -67,7 +63,6 @@ return [
     |
     */
 
-<<<<<<< HEAD
     //...
     'logo' => '',
     'logo_img' => 'vendor/adminlte/dist/img/logossetp.svg',
@@ -76,14 +71,6 @@ return [
     'logo_img_xl_class' => '',
     'logo_img_alt' => 'AdminLTE Logo',
     
-=======
-    'logo' => '<b>Admin</b>LTE',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3',
-    'logo_img_xl' => null,
-    'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'Admin Logo',
->>>>>>> 3e5931582f6be998297b6fe31bac1d679f967146
 
     /*
     |--------------------------------------------------------------------------
@@ -101,11 +88,7 @@ return [
     'auth_logo' => [
         'enabled' => false,
         'img' => [
-<<<<<<< HEAD
             'path' => 'vendor/adminlte/dist/img/logo.svg',
-=======
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
->>>>>>> 3e5931582f6be998297b6fe31bac1d679f967146
             'alt' => 'Auth Logo',
             'class' => '',
             'width' => 50,
@@ -132,11 +115,7 @@ return [
         'enabled' => true,
         'mode' => 'fullscreen',
         'img' => [
-<<<<<<< HEAD
             'path' => 'vendor/adminlte/dist/img/logo.svg',
-=======
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
->>>>>>> 3e5931582f6be998297b6fe31bac1d679f967146
             'alt' => 'AdminLTE Preloader Image',
             'effect' => 'animation__shake',
             'width' => 60,
@@ -157,13 +136,8 @@ return [
     */
 
     'usermenu_enabled' => true,
-<<<<<<< HEAD
     'usermenu_header' => true,
     'usermenu_header_class' => 'bg-success',
-=======
-    'usermenu_header' => false,
-    'usermenu_header_class' => 'bg-primary',
->>>>>>> 3e5931582f6be998297b6fe31bac1d679f967146
     'usermenu_image' => false,
     'usermenu_desc' => false,
     'usermenu_profile_url' => false,
@@ -224,15 +198,9 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-<<<<<<< HEAD
     'classes_sidebar' => ' elevation-3',
     'classes_sidebar_nav' => '',
     'classes_topnav' => 'navbar-sucess navbar-light',
-=======
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
-    'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
->>>>>>> 3e5931582f6be998297b6fe31bac1d679f967146
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -271,11 +239,7 @@ return [
     */
 
     'right_sidebar' => false,
-<<<<<<< HEAD
     'right_sidebar_icon' => '',
-=======
-    'right_sidebar_icon' => 'fas fa-cogs',
->>>>>>> 3e5931582f6be998297b6fe31bac1d679f967146
     'right_sidebar_theme' => 'dark',
     'right_sidebar_slide' => true,
     'right_sidebar_push' => true,
@@ -295,11 +259,7 @@ return [
     */
 
     'use_route_url' => false,
-<<<<<<< HEAD
     'dashboard_url' => 'dashboard',
-=======
-    'dashboard_url' => 'home',
->>>>>>> 3e5931582f6be998297b6fe31bac1d679f967146
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -338,7 +298,6 @@ return [
     'menu' => [
         // Navbar items:
         [
-<<<<<<< HEAD
             'text' => 'busqueda',
             'search' => true,
             'topnav' => true,
@@ -357,38 +316,19 @@ return [
             'text' => 'Asignar',
             'url' => '/asignar',
             'icon' => 'fas fa-chart-bar', // Cambiado de 'fas fa-fw fa-chart' a 'fas fa-chart-bar'
-=======
-            'text' => 'Asignar',
-            'url' => '/asignar',
-            'icon' => 'fas fa-fw fa-clipboard',
->>>>>>> 3e5931582f6be998297b6fe31bac1d679f967146
         ],
         [
             'text' => 'Bitácoras',
             'url' => '/bitacoras',
-<<<<<<< HEAD
             'icon' => 'fas fa-book',
-=======
-            'icon' => 'fas fa-fw fa-book',
->>>>>>> 3e5931582f6be998297b6fe31bac1d679f967146
         ],
         [
             'text' => 'Importar',
             'url' => '/importar',
-<<<<<<< HEAD
             'icon' => 'fas fa-file-import',
         ],
         
        
-=======
-            'icon' => 'fas fa-fw fa-file-import',
-        ],
-        [
-            'text' => 'Registrar',
-            'url' => '/registrar',
-            'icon' => 'fas fa-fw fa-user-plus',
-        ],
->>>>>>> 3e5931582f6be998297b6fe31bac1d679f967146
 
         // Sidebar items:
       

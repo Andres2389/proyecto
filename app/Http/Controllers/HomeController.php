@@ -24,6 +24,6 @@ class HomeController extends Controller
     public function index()
     {
         // Simplemente retorna la vista sin pasar datos
-        return view('home');
+        return view('admin.dashboard');
     }
 }

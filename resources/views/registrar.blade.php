@@ -3,63 +3,140 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+
 @stop
 
 @section('content')
-<!doctype html>
-<html lang="en">
-    <head>
-        <title>Title</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
+<div class="card">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="ruta_de_la_imagen" alt="imagen" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+            <h3>Lista de registros</h3>
+          </div>
+      </div>
+   </div>
+<div class="group">
+    <div class="container-links">
+        
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a id="link" class="nav-link active " href="#">Aprendices</a>
+        </li>
+        <li class="nav-item">
+            <a  id="link" class="nav-link" href="#">Instructores</a>
+        </li>
+        <li class="nav-item">
+            <a  id="link" class="nav-link" href="#">Administradores</a>
+        </li>
+    </ul>
+  </div>
+   <div class="container-tables">
+       <div class="buttons">
+       <button type="submit">Exportar</button>
+       <button type="submit">Crear</button>
+        </div>
+   <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">DataTable Example</h3>
+                    </div>
+                    <div class="card-body">
+                        <table id="example" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                <th class="checkbox"><input type="checkbox" id="selectAll"></th>
+                                  <th>ID</th>
+                                  <th>Name</th>
+                                  <th>Email</th>
+                                  <th>Created At</th>
+                                  <th>Updated At</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Datos de ejemplo estáticos -->
+                                <tr>
+                                   <td class="checkbox"><input type="checkbox"></td>
+                                   <td></td>
+                                   <td>1</td>
+                                   <td>John Doe</td>
+                                   <td>john@example.com</td>
+                                   <td>2024-01-01 12:00:00</td>
+                                   <td>2024-01-01 12:00:00</td>
+                                </tr>
+                                <tr>
+                                <td class="checkbox"><input type="checkbox"></td>
+                                   <td></td>
+                                   <td>2</td>
+                                   <td>alendra</td>
+                                   <td>john@example.com</td>
+                                   <td>2024-01-01 12:00:00</td>
+                                   <td>2024-01-01 12:00:00</td>
+                                </tr>
+                                <!-- Agrega más filas según sea necesario -->
+                            </tbody>
+                         </table>
+                     </div>
+                 </div>
+             </div>
+         </div>
+      </div>  
+   </div>
+</div>
 
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-    </head>
-
-    <body>
-      <h1>hola mundo</h1>
-        <footer>
-            <!-- place footer here -->
-        </footer>
-        <!-- Bootstrap JavaScript Libraries -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
-
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-    </body>
-</html>
-
-
-
-    <!-- Contenido común para todos los roles -->
 @stop
 
 @section('css')
-    {{-- Agrega aquí hojas de estilo adicionales --}}
+
     <style>
-       
-        }
+       @import url('https://cdn.datatables.net/2.0.7/css/dataTables.dataTables.css');
+       .card{
+        margin-top: 2em;
+       }
+       .container-links{
+        display: flex;
+        justify-content: flex-end;
+        
+       }
+      
+       .container-tables{
+
+        margin-top: 0.3em;
+        border: 8px solid #aaa;
+        padding: 2em;
+        width: 100%;
+       }
+       .group{
+        border:1px solid #aaa;
+        margin: 2em;
+        padding: 2em;
+       }
+       #link{
+        background-color: #aaa;
+        color: #000;
+       }
+       .buttons{
+        display: flex;
+        justify-content: flex-end;
+        gap:1em;
+
+       }
+       .buttons button{
+        background-color: #aaa;
+        border:1px solid #aaa;
+        
+       }
     </style>
 @stop
 
 @section('js')
-    <script> console.log("¡Hola, estoy usando el paquete Laravel-AdminLTE!"); </script>
+
+<script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
+<script>
+  $(document).ready(function() {
+      $('#example').DataTable();
+  });
 @stop
