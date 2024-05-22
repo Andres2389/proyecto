@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class registrar extends Model
+class dashboard extends Model
 {
     use HasFactory;
     public function index()
     {
-        return view('registar.registar.blade.php');
+        return view('dashboard.dashboard.blade.php');
     }
 }

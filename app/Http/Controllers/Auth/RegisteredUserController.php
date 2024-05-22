@@ -29,22 +29,40 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+        $validatedData = $request->validate([
+            'rol' => 'required|string|max:255',
+            'documento' => 'required|string|unique:users,documento',
+            'name' => 'required|string|max:255',
+            'apellidos' => 'required|string|max:255',
+            'correo_electronico' => 'required|string|email|max:255|unique:users,correo_electronico',
+            'contraseña' => 'required|string|min:8',
+            'telefono' => 'required|string|max:255',
+            'tipo_etapa' => 'required|string|max:255',
+            'programa_formacion' => 'required|string|max:255',
+            'ficha' => 'required|string|max:255',
+            'instructor_asignado' => 'required|string|max:255',
         ]);
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
+        // Crear el nuevo usuario
+        User::create([
+            'rol' => $validatedData['rol'],
+            'documento' => $validatedData['documento'],
+            'name' => $validatedData['name'],
+            'apellidos' => $validatedData['apellidos'],
+            'correo_electronico' => $validatedData['correo_electronico'],
+            'contraseña' => bcrypt($validatedData['contraseña']),
+            'telefono' => $validatedData['telefono'],
+            'tipo_etapa' => $validatedData['tipo_etapa'],
+            'programa_formacion' => $validatedData['programa_formacion'],
+            'ficha' => $validatedData['ficha'],
+            'instructor_asignado' => $validatedData['instructor_asignado'],
         ]);
-
+        
+        
         event(new Registered($user));
 
         Auth::login($user);
 
-        return redirect(route('dashboard', absolute: false));
+        return redirect()->route('user.index');
     }
 }

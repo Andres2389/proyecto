@@ -1,52 +1,50 @@
-<?php
+    <?php
 
-namespace App\Models;
+    namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Database\Eloquent\Model;
-use Spatie\Permission\Traits\HasRoles;
-
-class User extends Authenticatable
-{
-    use HasFactory, Notifiable, HasRoles;
+    use Illuminate\Database\Eloquent\Model;
 
     /**
-     * The attributes that are mass assignable.
+     * Class User
      *
-     * @var array
+     * @property $id
+     * @property $rol
+     * @property $documento
+     * @property $name
+     * @property $apellidos
+     * @property $correo_electronico
+     * @property $contraseña
+     * @property $telefono
+     * @property $tipo_etapa
+     * @property $programa_formacion
+     * @property $ficha
+     * @property $instructor_asignado
+     * @property $created_at
+     * @property $updated_at
+     *
+     * @property Bitacora[] $bitacoras
+     * @package App
+     * @mixin \Illuminate\Database\Eloquent\Builder
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+    class User extends Model
+    {
+        
+        protected $perPage = 20;
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+        /**
+         * The attributes that are mass assignable.
+         *
+         * @var array<int, string>
+         */
+        protected $fillable = ['rol', 'documento', 'name', 'apellidos', 'correo_electronico', 'contraseña', 'telefono', 'tipo_etapa', 'programa_formacion', 'ficha', 'instructor_asignado'];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
 
-    /**
-     * Assign a role to the user.
-     *
-     * @param string|array $role
-     * @return \App\Models\User
-     */
-  
-}
+        /**
+         * @return \Illuminate\Database\Eloquent\Relations\HasMany
+         */
+        public function bitacoras()
+        {
+            return $this->hasMany(\App\Models\Bitacora::class, 'id', 'id_usuario');
+        }
+        
+    }
